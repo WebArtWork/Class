@@ -1,0 +1,63 @@
+.wrapper_register {
+   padding: 45px;
+   background-color: #162B43;
+   width: 650px;
+   h2 {
+      text-align: center;
+      margin: -15px 0px 15px 0px;
+      color: white;
+   }
+}
+
+.register-box {
+   display: flex;
+}
+.register_name {
+   margin-right: 40px;
+}
+.register-input {
+   display: block;
+   width: 300px;
+   height: 50px;
+   background-color: #EFE0E0;
+   border: none;
+   padding: 15px;
+   margin-bottom: 20px;
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   -ms-border-radius: 5px;
+   -o-border-radius: 5px;
+}
+
+.register_btn button {
+   display: block;
+   background-color: #18B9B9;
+   border: none;
+   margin: 0 auto;
+   width: 300px;
+   height: 60px;
+   transition: .5s ease;
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   -ms-border-radius: 5px;
+   -o-border-radius: 5px;
+   font-size: 30px;
+   color: #fff;
+   cursor: pointer;
+}
+
+.register_create {
+   text-align: center;
+   margin-top: 15px;
+   color: #DFD9D9;
+   a {
+      text-decoration: none;
+      color: #18B9B9;
+      margin-left: 5px;
+      font-weight: bold;
+   }
+
+}
+
