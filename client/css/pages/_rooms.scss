@@ -1,0 +1,69 @@
+.rooms-block {
+   position: relative;
+   color: #162B43;
+   width: 330px;
+   text-align: center;
+   margin-right: 25px;
+   margin-bottom: 25px;
+
+   img {
+      width: 330px;
+   }
+
+}
+.rooms-add {
+   position: relative;
+   color: #162B43;
+   width: 330px;
+   text-align: center;
+   width: 330px;
+   height: 250px;
+   background-color: #fff6f6;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin-right: 25px;
+
+
+}
+
+.rooms-add_title {
+   font-size: 30px;
+}
+.rooms-add_plus {
+   font-size: 30px;
+   button {
+      border: none;
+      background: none;
+   }
+}
+
+.rooms {
+   padding: 20px;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.rooms_number {
+   width: 330px;
+   height: 50px;
+   background-color: #C4C4C4;
+   font-size: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   span {
+      margin-right: 5px;
+   }
+}
+
+.rooms_title {
+   position: absolute;
+   background-color: rgba(196, 196, 196, 0.7);
+   height: 50px;
+   width: 330px;
+   bottom: 50px;
+   font-size: 30px;
+}

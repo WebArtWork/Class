@@ -8,6 +8,7 @@
 	<meta name="keywords" content="waw, waw framework">
 	<meta name="author" content="Honchar Denys">
 	<base href="/">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="/css/index.css">
  	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78236546-11"></script>
@@ -19,6 +20,27 @@
 	</script>
  </head>
 <body>
+	<div class="rooms">
+		<div class="rooms-add">
+			<div class="rooms-add_plus"><button><i class="fas fa-plus-circle"></i></button></i></div>
+			<div class="rooms-add_title">Create new room</div>
+		</div>
+		<div class="rooms-block">
+			<img src="/img/category_education.jpg">
+			<div class="rooms_title">Education</div>
+			<div class="rooms_number"><span>123</span> Rooms</div>
+		</div>
+		<!-- <div class="category-sport"></div>
+			<div class="category-dance"></div>
+			<div class="category-languages"></div>
+			<div class="category-music"></div>
+			<div class="category-trainings"></div>
+			<div class="category-art"></div>
+			<div class="category-games"></div>
+			<div class="category-health"></div>
+			<div class="category-cooking"></div> -->
+	</div>
+
 	<script src="/gen/user-min.js"></script>
 	<script>
 		var app = angular.module('ngapp',['ui.router', 'wcom']);

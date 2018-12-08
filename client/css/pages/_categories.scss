@@ -1,0 +1,37 @@
+.category-education {
+   position: relative;
+   color: #162B43;
+   width: 300px;
+   text-align: center;
+
+   img {
+      width: 300px;
+   }
+
+}
+.category {
+   padding: 20px;
+}
+
+.category_number {
+   width: 300px;
+   height: 50px;
+   background-color: #C4C4C4;
+   font-size: 20px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+
+   span {
+      margin-right: 5px;
+   }
+}
+
+.category_title {
+   position: absolute;
+   background-color: rgba(196, 196, 196, 0.7);
+   height: 50px;
+   width: 300px;
+   bottom: 46px;
+   font-size: 30px;
+}
