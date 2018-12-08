@@ -1,28 +1,15 @@
-<form action="/api/user/signup" method="POST" class="wrapper_register">
-	<h2 class="register_title">Sign Up</h2>
-	<div class="register-box">
-		<div>
-			<div class="register_name">
-				<input class="register-input" type="text" placeholder="User Name">
-			</div>
-			<div class="register_email">
-				<input class="register-input" type="text" placeholder="Email">
-			</div>
-		</div>
-		<div>
-			<div class="register_pass">
-				<input class="register-input" type="password" placeholder="Password">
-			</div>
-			<div class="register_pass_req">
-				<input class="register-input" type="password" placeholder="Repeat Password">
-			</div>
-		</div>
-	</div>
-	<div iv class="register_btn">
-		<input type="submit" href="/api/user/signup" value="Create account">
-		<!-- <button type="submit">Create account</button> -->
-	</div>
-	<div class="register_create">
-		<a ng-click="u.Login()">Login your account</a>
-	</div>
+<form action="/api/user/signup" method="POST" class="wrapper_login">
+   <div class="login_email">
+      <input class="login-input" name="username" type="email" placeholder="Email">
+   </div>
+   <div class="login_pass">
+      <input class="login-input"  name="password" type="password" placeholder="Password">
+   </div>
+   <div class="login_btn">
+      <input type="submit"value="Join" >
+   </div>
+   <div class="login_create">
+      <span>Not registered?</span>
+      <a ng-click="u.Register();">Create an account</a>
+   </div>
 </form>
