@@ -23,6 +23,7 @@
 @import "atoms/background";
 @import "atoms/beside";
 @import "atoms/visibility";
+@import "plugins/wmodal.scss";
 
 // 4. Layouts - some related sections 
 @import "layouts/base";
@@ -46,4 +47,4 @@
 
 
 @import "explore";
-@import "plugins/wmodal.scss";
+@import "pages/categories.scss";
