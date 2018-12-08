@@ -1,6 +1,7 @@
 controllers.Auth = function($scope){
 	"ngInject";
 	var user = $scope.user = {};
+	console.log("ggg");
 	/*
 	*	ReCaptcha
 	*/
@@ -57,6 +58,7 @@ controllers.Auth = function($scope){
 controllers.Users = function($scope, User){
 	"ngInject";
 	$scope.u = User;
+	console.log("scope");
 };
 directives.lusers = function(){
 	return {
