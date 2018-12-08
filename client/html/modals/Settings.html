@@ -1,0 +1,41 @@
+<div>
+		<h2>Your Profile</h2>
+		<div>
+			<label for="settings_name" >Name:</label>
+			<input id="settings_name" type="text" placeholder="Enter Your Name" ng-model="u.name">
+		</div>
+		<div>
+			<label for="settings_age" >Age:</label>
+			<input id="settings_age" type="text" placeholder="Enter Your Age" ng-model="u.data.age">
+		</div>
+		<div>
+			<label>Choose sex:</label>	
+			<div>
+				<i class="fas fa-mars"></i>   <label style="width: auto;" for="settings_man"> Man</label>
+				<input id="settings_man" type="Radio" name="gender" ng-model="u.data.gender" ng-value="false">
+				<!-- <i class="fas fa-female"></i> --><i class="fas fa-venus"></i>    <label style="width: auto;" for="settings_woman"> Woman </label>
+				<input id="settings_woman" type="Radio" name="gender" ng-model="u.data.gender" ng-value="true">
+			</div>
+		</div>
+		<div>
+			<label for="settings_email" >Email:</label>
+    		<input id="settings_email" type="email" ng-model="u.email" placeholder="Type your email..." name="email" class="" >
+		</div>
+		<div>
+			<label for="settings_pass" >Old password:</label>
+			<input id="settings_pass" type="password" placeholder="Password" ng-model="u.oldPass">
+		</div>
+		<div>
+			<label for="settings_newpass" >New password:</label>
+			<input id="settings_newpass" type="password" placeholder="Password" ng-model="u.newPass">
+		</div>
+		<div>
+			<div class="form-btn" ng-click="u.updateAll(); close();">
+				<input style="width: 170px;" type="submit" value="SAVE" >
+			</div>
+			<div ng-disabled="!u.oldPass||u.newPass" class="form-btn" ng-click="u.changePassword(u.oldPass, u.newPass); close()">
+				<input style="width: 170px;" type="submit" value="CHANGE PASSWORD" >
+			</div>
+		</div>
+	</div>
+</div>

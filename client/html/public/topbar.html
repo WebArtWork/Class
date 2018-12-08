@@ -1,0 +1,34 @@
+{% extends 'Cattegories.html' %}
+{% block body %}
+   <div class="topnav">
+      <div class="topnav_ menu">
+        <a href="/">Home</a>
+        <a href="#About">About</a>
+        <div ng-if="u._id">
+          <a href="html/public/Categories.html">Categories</a>
+          <a href="html/public/Rooms.html">Rooms</a>
+          <a href="/api/user/logout">Logout</a>
+        </div>
+      </div>
+      <div ng-if="!u._id">
+        <a ng-click="u.Login()">Login/Register</a>
+      </div>
+        </div>
+
+        <div class="category">
+    <div class="category-education">
+      <img  src="/img/category_education.jpg">
+      <div class="category_title">Education</div>
+      <div class="category_number"><span>123</span> Rooms</div> 
+    </div>
+    <!-- <div class="category-sport"></div>
+    <div class="category-dance"></div>
+    <div class="category-languages"></div>
+    <div class="category-music"></div>
+    <div class="category-trainings"></div>
+    <div class="category-art"></div>
+    <div class="category-games"></div>
+    <div class="category-health"></div>
+    <div class="category-cooking"></div> -->
+  </div>
+{% endblock %}
