@@ -1,4 +1,4 @@
-services.user = function(mongo, $http, file) {
+services.user = function(mongo, $http, file, modal) {
 	var self = this;
 	console.log(this);
 	$http.get('/api/user/me').then(function(resp) {
@@ -59,10 +59,10 @@ services.user = function(mongo, $http, file) {
 		self.update();
 	}
 	this.Register = function() {
+		console.log("log");
         modal.open({
             templateUrl: '/html/modals/Register.html',
             u: user
         });
-        console.log("log");
-    }
+            }
 }
