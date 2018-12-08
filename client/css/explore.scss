@@ -58,6 +58,9 @@
    font-size: 35px;
    text-align: center;
    border-bottom: 2px solid $black;
+   &:hover {
+      text-decoration: none;
+   }
 }
 
 //   ABOUT PART 
