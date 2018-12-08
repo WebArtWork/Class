@@ -1,13 +1,13 @@
 {% extends '__index.html' %}
 {% block body %}
 <div class="container">
-  <section class="container_header">
+  <section class="container_header" ng-controller="Users">
     <div class="topnav">
       <div class="topnav_menu">
         <a href="/">Home</a>
         <a href="#About">About</a>
       </div>
-      <a href="Register()">Login/Register</a>
+      <a ng-click="Register()">Login/Register</a>
     </div>
     <div class="header_title">
       <h2> WELCOME TO CLASS COMMUNITY</h2>
