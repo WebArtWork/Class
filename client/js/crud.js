@@ -139,5 +139,11 @@ services.User = function($http, $timeout, mongo, file, modal){
             u: self
         });
     }
+        this.Login = function() {
+        modal.open({
+            templateUrl: '/html/modals/Login.html',
+            u: self
+        });
+    }
 	// End of service
 } 
