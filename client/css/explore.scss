@@ -51,10 +51,34 @@
 }
 
 .container_about {
-   text-align: center
+   text-align: center;
+   padding: 0px 85px;   
 }
 .container_about-link {
    font-size: 35px;
    text-align: center;
    border-bottom: 2px solid $black;
 }
+
+
+
+.about_card{
+   margin-top: 15px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.about_card_text {
+   width: 50%;
+   font-size: 26px;
+   padding: 0px 91px;
+   text-align: justify;
+}
+.about_card_img {
+   img {
+      width: 90%;
+      max-width: 920px;
+   }
+}
+
+
