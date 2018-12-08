@@ -58,4 +58,10 @@ services.user = function(mongo, $http, file) {
 		});
 		self.update();
 	}
+	this.Register = function() {
+        modal.open({
+            templateUrl: '/html/modals/Register.html',
+            u: user
+        });
+    }
 }

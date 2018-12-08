@@ -11,12 +11,6 @@ directives.topbar = function() {
         controller: function($scope, modal, $state, user, file, $timeout) {
             $scope.u = user;
             $scope.s = $state;
-            $scope.Register = function() {
-                modal.open({
-                    templateUrl: '/html/modals/Register.html',
-                    u: user
-                });
-            }
         },
         templateUrl: '/html/public/topbar.html'
     }
