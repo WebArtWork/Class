@@ -1,0 +1,59 @@
+{% extends 'index.html' %}
+{% block body %}
+<div class="container">
+  <section class="container_header">
+    <div class="topnav">
+      <div class="topnav_menu">
+        <a href="/">Home</a>
+        <a href="#About">About</a>
+      </div>
+      <a href="Register()">Login/Register</a>
+    </div>
+    <div class="header_title">
+      <h2> WELCOME TO CLASS COMMUNITY</h2>
+    </div>
+    <div class="header_btn">
+      <button ng-click="Register()">Join</button>
+    </div>  
+  </section>
+
+
+
+  <section class="container_about">
+    <a class="container_about-link" name="About">About</a>
+    <div class="about_card">
+      <div class="about_card_text_first">
+        CLASS COMMUNITY is a social network for communication in groups. With it, you can create or join already existing
+          discussions, which for your convenience are divided into categories.
+      </div>
+      <div class="about_card_img">
+        <img src="../img/about_1.png" alt="about_1">
+      </div>
+    </div>
+    <div class="about_card">
+      <div class="about_card_img">
+        <img src="../img/about_2.png" alt="about_2">
+      </div>
+      <div class="about_card_text">
+        Using chat rooms, the teacher will be able to easily inform his class about homework assignments, adjust the schedule,
+        publish school news and announcements around the class, bring up the topic for discussion and receive feedback from
+        each student. The teacher can add photos, links to interesting books, useful materials, tests, questionnaires - that
+        is, everything that the children will be interested in and useful to read. Such a virtual space creates a sense of team
+        cohesion, friendly relations with the class teacher. Also, the teacher can create a separate chat for parents to
+        communicate with them separately.
+      </div>  
+    </div>
+    <div class="about_card">
+      <div class="about_card_text">
+        CLASS COMMUNITY allows you to search for partners and trainers in your chosen sport, publish notes about your workouts,
+        communicate with friends with whom you, for example, go to fitness, talk about your successes, and keep a photo journal
+        of workouts.
+      </div>
+      <div class="about_card_img">
+        <img src="../img/about_3.png" alt="about_3">            
+      </div>
+    </div>
+  </section>
+
+</div>
+{% endblock %}
