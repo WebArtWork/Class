@@ -21,7 +21,7 @@
     <div class="header_title">
       <h2> WELCOME TO CLASS COMMUNITY</h2>
     </div>
-    <div class="header_btn">
+    <div ng-if="!u._id" class="header_btn">
       <button ng-click="u.Register()">Join</button>
     </div>  
   </section>
