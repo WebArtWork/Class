@@ -58,11 +58,5 @@ services.user = function(mongo, $http, file, modal) {
 		});
 		self.update();
 	}
-	this.Register = function() {
-		console.log("log");
-        modal.open({
-            templateUrl: '/html/modals/Register.html',
-            u: user
-        });
-            }
+
 }

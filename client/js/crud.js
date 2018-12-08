@@ -5,7 +5,7 @@ app.service(services).filter(filters).directive(directives).controller(controlle
 *	We don't use waw crud on the user as it's basically personal update.
 *	And if user use more then one device we can easly handle that with sockets.
 */
-services.User = function($http, $timeout, mongo, file){
+services.User = function($http, $timeout, mongo, file, modal){
 	// waw crud
 		let self = this;
 		this.all_skills = ['cooking','fishing','painting'];
@@ -133,5 +133,11 @@ services.User = function($http, $timeout, mongo, file){
 				newPass: newPass
 			});
 		}
+		this.Register = function() {
+        modal.open({
+            templateUrl: '/html/modals/Register.html',
+            u: self
+        });
+    }
 	// End of service
 } 
