@@ -1,7 +1,10 @@
 .wrapper_register {
    padding: 45px;
    background-color: #162B43;
-   width: 650px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
    h2 {
       text-align: center;
       margin: -15px 0px 15px 0px;

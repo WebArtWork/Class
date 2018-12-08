@@ -1,7 +1,11 @@
 .wrapper_login {
    padding: 45px;
    background-color: #162B43;
-   width: 300px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+
 }
 
 .login-input {
