@@ -63,5 +63,6 @@ services.user = function(mongo, $http, file) {
             templateUrl: '/html/modals/Register.html',
             u: user
         });
+        console.log("log");
     }
 }

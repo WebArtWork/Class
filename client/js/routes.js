@@ -24,6 +24,7 @@ app.config(function($stateProvider, $locationProvider, $urlRouterProvider) {
         controller: function($scope, user) {
             "ngInject";
             $scope.u = user;
+            console.log("console.log();");
         },
         url: root,
         templateUrl: '/html/public/Explore.html'
