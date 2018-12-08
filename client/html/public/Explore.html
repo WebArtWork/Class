@@ -6,10 +6,17 @@
       <div class="topnav_ menu">
         <a href="/">Home</a>
         <a href="#About">About</a>
-        <a href="/html/Categories.html">Categories</a>
-        <a href="/html/Rooms.html">Rooms</a>
+        <div ng-if="u._id">
+          <a href="/html/Categories.html">Categories</a>
+          <a href="/html/Rooms.html">Rooms</a>
+          <a href="/api/user/logout">Logout</a>
+          {{u.email}}
+        </div>
       </div>
-      <a ng-click="u.Login()">Login/Register</a>
+      <div ng-if="!u._id">
+        <a ng-click="u.Login()">Login/Register</a>
+      </div>
+      
     </div>
     <div class="header_title">
       <h2> WELCOME TO CLASS COMMUNITY</h2>

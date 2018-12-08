@@ -7,50 +7,21 @@ app.service(services).filter(filters).directive(directives).controller(controlle
 */
 services.User = function($http, $timeout, mongo, file, modal){
 	// waw crud
-		let self = this;
-		this.all_skills = ['cooking','fishing','painting'];
-		let updateAll = function(){
+		var self = this;
+		var updateAll = function(){
 			return {
 				gender: self.gender,
-				skills: self.skills,
-				birth: self.birth,
+				age: self.age,
 				name: self.name,
-				data: self.data,
 				_id: self._id,
 				is: self.is
 			};
 		}
 		$http.get('/api/user/me').then(function(resp){
-			for(let key in resp.data){
+			for(var key in resp.data){
 				self[key] = resp.data[key];
 			}
-			self.birth = new Date(self.birth);
-			self.skills_checked = {};
-			if(self._id){
-				for (var i = 0; i < self.skills.length; i++) {
-					self.skills_checked[self.skills[i]] = true;
-				}
-			}
-			self.users = mongo.get('user', {
-				age: function(val, cb, doc){
-					doc.birth = new Date(doc.birth);
-					let ageDate = new Date(Date.now() - doc.birth.getTime());
-					cb(Math.abs(ageDate.getUTCFullYear() - 1970));
-				},
-				following: function(val, cb, doc){
-					cb(self.following(doc._id));
-				}
-			});
 		});
-		this.updateSkill = function(skill){
-			self.skills = [];
-			for(let key in self.skills_checked){
-				if(self.skills_checked[key]){
-					self.skills.push(key);
-				}
-			}
-			mongo.updateAll('user', updateAll());
-		}
 	// Search
 		this.sMale = this.sFemale = true;
 		this.search = function(){
@@ -121,7 +92,7 @@ services.User = function($http, $timeout, mongo, file, modal){
 				if(resp) self.avatarUrl = resp.data;
 			});
 		});
-		this.delete = function(){
+		this.deletee = function(){
 			mongo.delete('user', {}, function(){
 				window.location.href = "/";
 			});
