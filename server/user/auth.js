@@ -8,7 +8,10 @@ module.exports = function(sd) {
 	*/
 		var router = sd._initRouter('/api/user');
 		if(mongoose.connection.readyState==0){
-			mongoose.connect(sd._mongoUrl);
+			mongoose.connect(sd._mongoUrl, {
+				useNewUrlParser: true
+			});
+			mongoose.set('useCreateIndex', true);
 			mongoose.Promise = global.Promise;
 		}
 		sd._passport.serializeUser(function(user, done) {
@@ -19,8 +22,59 @@ module.exports = function(sd) {
 				done(err, user);
 			});
 		});
+	/*
+	*	Set "is" on users
+	*/
+		var unique = {};
+		var set = function(email, which){
+			if(unique[email]){
+				return setTimeout(function(){
+					set(email, which);
+				}, 500);
+			}
+			unique[email] = true;
+			User.findOne({
+				email: email
+			}, function(err, user){
+				if(user){
+					if(!user.is) user.is={};
+					user.is[which ] = true;
+					user.markModified('is');
+					user.save(function(){
+						unique[email] = false;
+					});
+				}else{
+					unique[email] = false;
+				}
+			});
+		}
+		if(typeof sd._config.is == 'object'){
+			for(var key in sd._config.is){
+				if(Array.isArray(sd._config.is[key])){
+					for (var i = 0; i < sd._config.is[key].length; i++) {
+						set(sd._config.is[key][i], key);
+					}
+				}
+			}
+		}
 	// Local Routing
 		if(sd._config.passport.local){
+			router.post("/changePassword", sd._ensure, function(req, res) {
+				if (req.user.validPassword(req.body.oldPass)){
+					req.user.password = req.user.generateHash(req.body.newPass);
+					req.user.save(function(){
+						res.json(true);
+					});
+				}else res.json(false);
+			});
+			router.post("/admin/changePassword", sd.ensure_super, function(req, res) {
+				User.findOne({_id: req.body._id}, function(err, user){
+					user.password = user.generateHash(req.body.newPass);
+					user.save(function(){
+						res.json(true);
+					});
+				});
+			});
 			router.get('/logout', function(req, res) {
 				req.logout();
 				res.redirect(sd._config.passport.local.successRedirect);
@@ -64,6 +118,7 @@ module.exports = function(sd) {
 							newUser.is = {
 								admin: false
 							};
+							newUser.name = req.body.name;
 							newUser.email = username.toLowerCase();
 							newUser.password = newUser.generateHash(password);
 							newUser.save(function(err) {

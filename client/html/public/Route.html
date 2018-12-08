@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="ngapp">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Class Community</title>
+	<meta name="description" content="Social network for classes.">
+	<meta name="keywords" content="class community">
+	<base href="/">
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	<link rel="stylesheet" type="text/css" href="/gen/public.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+</head>
+<body>
+	<div  topbar></div>
+	<ui-view></ui-view>
+	<!-- Script -->
+	<script src="/gen/lab-min.js"></script>
+	<script>
+		var app = angular.module('ngapp', ['ui.router', 'wdrag', 'wcom', 'ui.bootstrap']);
+	</script>
+	<script src="/js/wcom/wcom.js"></script>
+	<script src="/js/routes.js"></script>
+	<script src="/js/user.js"></script>
+</body>
+</html>
