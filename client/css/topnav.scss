@@ -1,0 +1,36 @@
+$darkblue: #162B43;
+$lightblue: #65DAFF;
+$lightblack: #464444;
+
+
+.topnav {
+   background-color: $darkblue;
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   padding: 5px 50px;   
+}
+
+.topnav a {
+   color:$white;
+   text-align: center;
+   padding: 14px 16px;
+   text-decoration: none;
+   font-size: 17px;
+   margin-left: auto;
+
+   &:hover {
+      color: $lightblue;
+      border-radius: 5px   ;
+      -webkit-border-radius: 5px   ;
+      -moz-border-radius: 5px   ;
+      -ms-border-radius: 5px   ;
+      -o-border-radius: 5px   ;
+   }
+}
+
+.topnav a.active {
+   background-color: #4CAF50;
+   color: white;
+}
+
