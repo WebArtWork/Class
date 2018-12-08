@@ -5,6 +5,7 @@
    text-align: center;
    margin-right: 25px;
    margin-bottom: 25px;
+   height: fit-content;
 
    img {
       width: 330px;
@@ -17,7 +18,7 @@
    width: 330px;
    text-align: center;
    width: 330px;
-   height: 250px;
+   height: 269px;
    background-color: #fff6f6;
    display: flex;
    flex-direction: column;
@@ -38,7 +39,9 @@
       background: none;
    }
 }
-
+.wrapper_rooms {
+   display: flex;
+}
 .rooms {
    padding: 20px;
    display: flex;
@@ -67,3 +70,4 @@
    bottom: 50px;
    font-size: 30px;
 }
+
