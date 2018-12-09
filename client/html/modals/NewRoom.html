@@ -1,13 +1,15 @@
 <div>
-<label for="roomAvatarUrlId">
-	<img ng-src="{{room.avatarUrl}}">
-</label>
-<label>Name: </label>
-<input type="text" ng-model="room.name">
-<label>Description: </label>
-<input type="text" ng-model="room.description">
-<div>
+	<label for="roomAvatarUrlId">
+		<img ng-src="{{room.avatarUrl}}">
+	</label>
+	<label>Name: </label>
+	<input type="text" ng-model="room.name">
+	<label>Description: </label>
+	<input type="text" ng-model="room.description">
+	<div>
 		<select ng-options="types as types for types in ['Education', 'Sport and fitness', 'Dance','Languages', 'Music', 'Trainings', 'Art', 'Games', 'Health and beauty', 'Cooking']" ng-model="room.types">	
-</div>
-<input ng-click="r.create(room); close();" type="submit" value="Create Room">
+	</div>
+	<div class="room_create-btn">
+		<input ng-click="r.create(room); close();" type="submit" value="Create Room">
+	</div>
 </div>
