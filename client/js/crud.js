@@ -155,7 +155,13 @@ services.User = function($http, $timeout, mongo, file, modal){
             templateUrl: '/html/modals/SettingsChat.html',
             u: self
         });
+    }
 
+        this.Albom = function() {
+        modal.open({
+            templateUrl: '/html/modals/Albom.html',
+            u: self
+        });
 
     }
 	// End of service
