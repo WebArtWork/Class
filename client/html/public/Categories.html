@@ -23,7 +23,7 @@
       <div class="topnav_menu">
         <a href="/">Home</a>
         <a href="#About">About</a>
-        <div ng-if="u._id">
+        <div>
           <a href="/html/public/Categories.html">Categories</a>
           <a href="/html/public/Rooms.html">Rooms</a>
          
@@ -125,7 +125,7 @@
   </div>
 	<script src="/gen/public-min.js"></script>
 	<script>
-		var app = angular.module('ngapp',['ui.router', 'wcom']);
+		var app = angular.module('ngapp',['wcom']);
 	</script>
 	<script src="/js/wcom/wcom.js"></script>
 	<script src="/js/crud.js"></script>
