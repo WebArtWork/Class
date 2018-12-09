@@ -19,23 +19,39 @@
 	</script>
  </head>
 <body>
-	<div class="category">
-		<div class="category-education">
-			<img  src="/img/category_education.jpg">
-			<div class="category_title">Education</div>
-			<div class="category_number"><span>123</span> Rooms</div> 
-		</div>
-		<button ng-click="u.NewRoom()"></button>
-		<!-- <div class="category-sport"></div>
-		<div class="category-dance"></div>
-		<div class="category-languages"></div>
-		<div class="category-music"></div>
-		<div class="category-trainings"></div>
-		<div class="category-art"></div>
-		<div class="category-games"></div>
-		<div class="category-health"></div>
-		<div class="category-cooking"></div> -->
-	</div>
+	     <div class="topnav">
+      <div class="topnav_menu">
+        <a href="/">Home</a>
+        <a href="#About">About</a>
+        <div ng-if="u._id">
+          <a href="/html/public/Categories.html">Categories</a>
+          <a href="/html/public/Rooms.html">Rooms</a>
+         
+        </div>
+      </div>
+      <div class="top_nav-login">
+        <div><a href="/api/user/logout">Logout</a></div>
+        <img ng-click="u.Settings()" ng-src="{{u.avatarUrl}}">
+        
+      </div>
+  </div>
+
+        <div class="category">
+    <div class="category-education">
+      <img  src="/img/category_education.jpg">
+      <div class="category_title">Education</div>
+      <div class="category_number"><span>123</span> Rooms</div> 
+    </div>
+    <!-- <div class="category-sport"></div>
+    <div class="category-dance"></div>
+    <div class="category-languages"></div>
+    <div class="category-music"></div>
+    <div class="category-trainings"></div>
+    <div class="category-art"></div>
+    <div class="category-games"></div>
+    <div class="category-health"></div>
+    <div class="category-cooking"></div> -->
+  </div>
 	<script src="/gen/public-min.js"></script>
 	<script>
 		var app = angular.module('ngapp',['ui.router', 'wcom']);

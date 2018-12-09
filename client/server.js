@@ -11,4 +11,12 @@ module.exports = function(app, sd) {
 			});
 		}		
 		app.get('/', Explore);
+		var Categories = function(req, res){
+			sd.User.find({}).limit(10).exec(function(err, users){
+				res.render('public/Categories', sd._ro(req, res, {
+					users: users
+				}));
+			});
+		}		
+		app.get('/Categories', Categories);
 }; 
