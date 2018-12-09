@@ -59,7 +59,7 @@ controllers.Users = function($scope, User){
 	"ngInject";
 	$scope.u = User;
 };
-controllers.Rooms = function($scope, room){
+controllers.Rooms = function($scope, Room){
 	"ngInject";
 	$scope.r = Room;
 };

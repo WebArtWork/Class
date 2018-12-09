@@ -11,6 +11,7 @@ module.exports = function(app, sd) {
 			});
 		}		
 		app.get('/', Explore);
+		
 		var Categories = function(req, res){
 			sd.User.find({}).limit(10).exec(function(err, users){
 				res.render('public/Categories', sd._ro(req, res, {
@@ -19,12 +20,22 @@ module.exports = function(app, sd) {
 			});
 		}		
 		app.get('/Categories', Categories);
+
 		var CategoryRooms = function(req, res){
-			sd.User.find({}).limit(10).exec(function(err, users){
+			sd.User.find({}).limit(10).exec(function(err, rooms){
 				res.render('public/CategoryRooms', sd._ro(req, res, {
-					users: users
+					rooms: rooms
 				}));
 			});
 		}		
 		app.get('/CategoryRooms', CategoryRooms);
+
+			var Rooms = function(req, res){
+			sd.User.find({}).limit(10).exec(function(err, rooms){
+				res.render('public/Rooms', sd._ro(req, res, {
+					users: users
+				}));
+			});
+		}		
+		app.get('/Rooms', Rooms);
 }; 

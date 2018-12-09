@@ -19,6 +19,7 @@ services.User = function($http, $timeout, mongo, file, modal){
 			};
 			
         }
+
 		$http.get('/api/user/me').then(function(resp){
 			for(var key in resp.data){
 				self[key] = resp.data[key];
@@ -118,6 +119,22 @@ services.User = function($http, $timeout, mongo, file, modal){
 				newPass: newPass
 			});
 		}
+		this.update = function(message) {
+		mongo.updateAll('user', {
+			name: self.name,
+			email: self.email,
+			data: self.data
+		});
+		$http.post('/api/user/status', {
+			email: self.email
+		});
+		if (message) {
+			iziToast.show({
+				message: message
+			});
+		}
+
+	}
 		this.Register = function() {
         modal.open({
             templateUrl: '/html/modals/Register.html',
