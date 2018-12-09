@@ -20,29 +20,38 @@
 	</script>
  </head>
 <body>
-	    <div class="topnav">
-      <div class="topnav_menu">
-        <a href="/">Home</a>
-        <a href="#About">About</a>
-        <div ng-if="u._id">
-          <a href="/html/public/Categories.html">Categories</a>
-          <a href="/html/public/Rooms.html">Rooms</a>
-         
-        </div>
-      </div>
-      <div class="top_nav-login">
-        <div><a href="/api/user/logout">Logout</a></div>
-        <img ng-click="u.Settings()" ng-src="{{u.avatarUrl}}">
-        
-      </div>
-  		</div>
+	<div class="topnav">
+		<div class="topnav_menu">
+			<a href="/">Home</a>
+			<a href="#About">About</a>
+			<div ng-if="u._id">
+				<a href="/html/public/Categories.html">Categories</a>
+				<a href="/html/public/Rooms.html">Rooms</a>
+			
+			</div>
+		</div>
+		<div class="top_nav-login">
+			<div><a href="/api/user/logout">Logout</a></div>
+			<img ng-click="u.Settings()" ng-src="{{u.avatarUrl}}">
+			
+		</div>
+	</div>
+
+
+
+
+
 	<div class="rooms">
+		<div class="rooms-add">
+			<div class="rooms-add_plus"><button><i class="fas fa-plus-circle"></i></button></i></div>
+			<div class="rooms-add_title">Create new room</div>
+		</div>
 		<div class="rooms-block">
 			<a href="html/public/Chat.html">
 			<img src="/img/category_education.jpg">
 		</a>
 			<div class="rooms_title">Education</div>
-			<div class="rooms_number"><span>123</span>Chats</div>
+			<div class="rooms_number"><span>123</span>rooms</div>
 
 		</div>
 		<!-- <div class="category-sport"></div>
