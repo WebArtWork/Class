@@ -39,15 +39,15 @@
 
 	<div class="rooms" ng-controller="Rooms">
 		<div class="rooms-add">
-			<div class="rooms-add_plus"><button ng-click="r.NewRoom()"><i class="fas fa-plus-circle"></i></button></div>
+			<div class="rooms-add_plus"><button ng-click="r.NewRoom(room)"><i class="fas fa-plus-circle"></i></button></div>
 			<div class="rooms-add_title">Create new room</div>
 		</div>
-		<div class="rooms-block">
+		<div ng-repeat="room in rooms" class="rooms-block">
 			<a href="/html/public/Room.html">
 			<img src="/img/category_education.jpg">
 		</a>
-			<div class="rooms_title">Education</div>
-			<div class="rooms_number"><span>123</span>chat's</div>
+			<div class="rooms_title">{{room.name}}</div>
+			<div class="rooms_number"><span>{{room.chat.length}}</span>chat's</div>
 
 		</div>
 		<!-- <div class="category-sport"></div>

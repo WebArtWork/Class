@@ -169,29 +169,16 @@ services.User = function($http, $timeout, mongo, file, modal) {
         }
         // End of service
 }
-console.log("outside");
 services.Room = function($http, $timeout, mongo, file, modal) {
-    console.log("Room");
     var self = this;
     this.rooms = mongo.get('room', function(arr, obj) {
         self.room = arr;
         self._room = obj;
     });
-    file.add({
-        id: 'roomAvatarUrlId',
-        width: 500,
-        height: 500
-    }, function(dataUrl) {
-        self.avatarUrl = dataUrl;
-        $http.post('/api/room/file', {
-            dataUrl: dataUrl
-        }).then(function(resp) {
-            self.avatarUrl = resp.data;
-        });
-    });
-    this.create = function(room, message) {
+    this.create = function(room) {
         mongo.create('room', {
             name: room.name,
+            type: room.type,
             description: room.description,
             author: room.author,
             members: room.members,
@@ -208,11 +195,6 @@ services.Room = function($http, $timeout, mongo, file, modal) {
                 created.avatarUrl = '/api/room/default.png';
             }
         });
-        if (message) {
-            iziToast.show({
-                message: message
-            });
-        }
     }
     this.update = function(room, message) {
         mongo.updateAll('room', {
@@ -238,11 +220,22 @@ services.Room = function($http, $timeout, mongo, file, modal) {
             });
         }
     }
-    this.NewRoom = function() {
+    this.NewRoom = function(_room) {
         modal.open({
             templateUrl: '/html/modals/NewRoom.html',
             r: self
         });
-        console.log("modal");
+        file.add({
+        id: 'roomAvatarUrlId',
+        width: 500,
+        height: 500
+    }, function(dataUrl) {
+        self.avatarUrl = dataUrl;
+        $http.post('/api/room/file', {
+            dataUrl: dataUrl
+        }).then(function(resp) {
+            self.avatarUrl = resp.data;
+        });
+    });
     }
 }

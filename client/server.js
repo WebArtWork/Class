@@ -56,4 +56,5 @@ module.exports = function(app, sd) {
 			});
 		}		
 		app.get('/Albom', Albom);
+
 }; 

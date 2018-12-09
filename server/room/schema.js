@@ -4,9 +4,9 @@ var Schema = mongoose.Schema({
 	author: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
 	members: [{type: mongoose.Schema.Types.ObjectId, ref: 'User'}],
 	url: {type: String, unique: true, sparse: true, trim: true},
-	avatarUrl: {type: String, default: '/api/group/default.png'},
+	avatarUrl: {type: String, default: '/api/room/avatar.png'},
 	description: String,
-	type: {
+	types: {
 		type: String,
 		enum: ['Education', 'Sport and fitness', 'Dance','Languages', 'Music', 'Trainings', 'Art', 'Games', 'Health and beauty', 'Cooking']
 	}
@@ -15,6 +15,7 @@ var Schema = mongoose.Schema({
 Schema.methods.create = function(obj, user, sd) {
 	this.author = user._id;
 	this.members = [user._id];
+	this.types = obj.types;
 	this.name = obj.name;
 	this.avatarUrl = obj.avatarUrl;
 	this.description = obj.description;

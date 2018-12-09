@@ -6,6 +6,55 @@
 <input type="text" ng-model="room.name">
 <label>Description: </label>
 <input type="text" ng-model="room.description">
-
-<input ng-click="r.create(room);" type="submit" value="Create Room">
+<div>
+				<label ng-click="room.types='education'">
+					<span>education</span>
+					<input type="Radio" name="types" ng-model="room.types" value="education">
+				</label>
+				<label  ng-click="room.types='sport'">
+					<span>sport</span>
+					<input type="Radio" name="types" ng-model="room.types" value="sport">
+				</label>
+				<label ng-click="room.types='dance'">
+					<span>dance</span>
+					<input type="Radio" name="types" ng-model="room.types" value="dance">
+				</label>
+				<label ng-click="room.types='languages'">
+					<span>languages</span>
+					<input type="Radio" name="types" ng-model="room.types" value="languages">
+				</label>
+				<label ng-click="room.types='music'">
+					<span>music</span>
+					<input type="Radio" name="types" ng-model="room.types" value="music">
+				</label>
+				<label ng-click="room.types='trainings'">
+					<span>trainings</span>
+					<input type="Radio" name="types" ng-model="room.types" value="trainings">
+				</label>
+				<label ng-click="room.types='art'">
+					<span>art</span>
+					<input type="Radio" name="types" ng-model="room.types" value="art">
+				</label>
+				<label ng-click="room.types='games'">
+					<span>games</span>
+					<input type="Radio" name="types" ng-model="room.types" value="games">
+				</label>
+				<label ng-click="room.types='health'">
+					<span>health</span>
+					<input type="Radio" name="types" ng-model="room.types" value="health">
+				</label>
+				<label ng-click="room.types='cooking'">
+					<span>cooking</span>
+					<input type="Radio" name="types" ng-model="room.types" value="cooking">
+				</label>
+				<label ng-click="room.types='work'">
+					<span>work</span>
+					<input type="Radio" name="types" ng-model="room.types" value="work">
+				</label>
+				<label ng-click="room.types='volunteering'">
+					<span>volunteering</span>
+					<input type="Radio" name="types" ng-model="room.types" value="volunteering">
+				</label>
+			</div>
+<input ng-click="r.create(room); close();" type="submit" value="Create Room">
 </div>
