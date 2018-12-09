@@ -32,10 +32,66 @@
       </div>
       <div class="top_nav-login">
         <div><a href="/api/user/logout">Logout</a></div>
-        <img ng-click="u.Settings()" ng-src="{{u.avatarUrl}}">
-        
-      </div>
-  		</div>
+        	<img ng-click="u.Settings()" ng-src="{{u.avatarUrl}}">       
+      	</div>
+			</div>
+
+
+
+			
+			<section>
+				<div class="wrapper_chats">
+					<div class="chats_bar">
+						<img class="" src="category_education.jpg">
+						<h3>Room's name</h3>
+						<div class="chat_bar_content">
+							<div class="chats_bar-admin">
+								Admin: <span> Name</span>
+							</div>
+							<div class="chats_bar-members">
+								Mebmers <span>38</span>
+							</div>
+							<div class="chats_bar-add">
+								Create new chat
+								<button>Plus</button>
+							</div>
+							<div class="chats_bar-desc">
+								<h3>Description:</h3>
+								<input type="text">
+							</div>
+						</div>
+					</div>
+					<div class="chats_block">
+						<div class="chats">
+							<div class="chads_card">
+								<img class="" src="category_education.jpg">
+								<div class="chats_title">Chat's name</div>
+								<div class="chats_number"><span>6</span> members</div>
+							</div>
+						</div>
+						<div class="chats">
+							<div class="chads_card">
+								<img class="" src="category_education.jpg">
+								<div class="chats_title">Chat's name</div>
+								<div class="chats_number"><span>6</span> members</div>
+							</div>
+						</div>
+						<div class="chats">
+							<div class="chads_card">
+								<img class="" src="category_education.jpg">
+								<div class="chats_title">Chat's name</div>
+								<div class="chats_number"><span>6</span> members</div>
+							</div>
+						</div>
+						<div class="chats">
+							<div class="chads_card">
+								<img class="" src="category_education.jpg">
+								<div class="chats_title">Chat's name</div>
+								<div class="chats_number"><span>6</span> members</div>
+							</div>
+						</div>
+					</div>
+			</section>
 	<script src="/gen/public-min.js"></script>
 	<script>
 		var app = angular.module('ngapp',['ui.router', 'wcom']);
