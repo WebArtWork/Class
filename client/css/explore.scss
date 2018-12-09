@@ -80,7 +80,13 @@
       max-width: 920px;
    }
 }
-.about_card_text {
+.about_card_text  {
+   h2,
+   h1 {
+      font-size: 26px;
+      font-weight: normal;
+      display: inline-block;
+   }
    width: 660px;
    font-size: 26px;
    text-align: justify;
