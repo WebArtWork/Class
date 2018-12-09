@@ -10,16 +10,14 @@ services.User = function($http, $timeout, mongo, file, modal){
 		var self = this;
 		var updateAll = function(){
 			return {
-				gender: self.gender,
+				data: self.data,
 				age: self.age,
 				name: self.name,
 				_id: self._id,
 				is: self.is,
-				avatarUrl: self.avatarUrl
+				email: self.email
 			};
-			
         }
-
 		$http.get('/api/user/me').then(function(resp){
 			for(var key in resp.data){
 				self[key] = resp.data[key];
@@ -31,12 +29,25 @@ services.User = function($http, $timeout, mongo, file, modal){
 		height: 500
 	}, function(dataUrl) {
 		self.avatarUrl = dataUrl;
-		$http.post('/api/user/file', {
+		$http.post('/api/user/avatar', {
 			dataUrl: dataUrl
 		}).then(function(resp) {
 			self.avatarUrl = resp.data;
 		});
 	});
+	this.update = function(message) {
+		mongo.updateAll('user', {
+			name: self.name,
+			email: self.email,
+			data: self.data
+		});
+		if (message) {
+			iziToast.show({
+				message: message
+			});
+		}
+
+	}
 	// Search
 		this.sMale = this.sFemale = true;
 		this.search = function(){
@@ -119,22 +130,6 @@ services.User = function($http, $timeout, mongo, file, modal){
 				newPass: newPass
 			});
 		}
-		this.update = function(message) {
-		mongo.updateAll('user', {
-			name: self.name,
-			email: self.email,
-			data: self.data
-		});
-		$http.post('/api/user/status', {
-			email: self.email
-		});
-		if (message) {
-			iziToast.show({
-				message: message
-			});
-		}
-
-	}
 		this.Register = function() {
         modal.open({
             templateUrl: '/html/modals/Register.html',
@@ -163,7 +158,6 @@ services.Room = function(mongo, $http, item, file, user) {
 		self.room = arr;
 		self._rom = obj;
 	});
-	console.log('something');
 	file.add({
 		id: 'roomAvatarUrlId',
 		width: 500,

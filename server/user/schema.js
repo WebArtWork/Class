@@ -10,7 +10,7 @@ var schema = mongoose.Schema({
 	gender: {type: String, enums: ['male', 'female'], sparse: true},
 	name: {type: String},
 	age: {type: Number},
-	data: {}, 
+	data: {}
 
 });
 schema.methods.generateHash = function(password) {

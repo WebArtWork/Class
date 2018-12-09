@@ -33,7 +33,7 @@ module.exports = function(app, sd) {
 			var Rooms = function(req, res){
 			sd.User.find({}).limit(10).exec(function(err, rooms){
 				res.render('public/Rooms', sd._ro(req, res, {
-					users: users
+					rooms: rooms
 				}));
 			});
 		}		

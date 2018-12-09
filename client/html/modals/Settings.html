@@ -10,7 +10,7 @@
 			<input id="settings_age" type="text" placeholder="Enter Your Age" ng-model="u.data.age">
 		</div>
 		<div class="settings_block-second">
-			<input class="settings_block--phone" id="phone" type="number" placeholder="Your phone">
+			<input class="settings_block--phone" id="phone" type="number" ng-model="u.data.number" placeholder="Your phone">
 			<div class="settings_block--gender">
 				<label>Choose sex:</label>
 				<div>
@@ -29,7 +29,7 @@
 		<input id="settings_pass" type="password" placeholder="Old Password" ng-model="u.oldPass">
 		<input id="settings_newpass" type="password" placeholder="New Password" ng-model="u.newPass">
 	</div>
-	<div class="settings_btn" ng-click="u.updateAll(); close();">
+	<div class="settings_btn" ng-click="u.update(); close();">
 		<input type="submit" value="Save changes">
 	</div>
 </div>

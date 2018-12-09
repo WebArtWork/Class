@@ -59,20 +59,31 @@ module.exports = function(sd) {
 	*/
 		router.get("/me", sd._ensure, function(req, res) {
 			res.json({
-				followings: req.user.followings,
-				architect: req.user.architect,
-				followers: req.user.followers,
 				avatarUrl: req.user.avatarUrl,
-				skills: req.user.skills,
 				gender: req.user.gender,
-				birth: req.user.birth,
+				age: req.user.age,
 				name: req.user.name,
 				date: req.user.date,
-				kind: req.user.kind,
 				_id: req.user._id,
 				is: req.user.is
 			});
 		});
+		router.post("/status", function(req, res) {
+            User.findOne({
+                $or: [{
+                    reg_email: req.body.email.toLowerCase()
+                },{
+                    email: req.body.email.toLowerCase()
+                }]
+            }, function(err, user) {
+                var json = {};
+                json.email = !!user;
+                if(user&&req.body.password){
+                    json.pass = user.validPassword(req.body.password);
+                }
+                res.json(json);
+            });
+        });
 		router.post("/changePassword", sd._ensure, function(req, res) {
 			if (!req.user.validPassword(req.body.oldPass)){
 				req.user.password = req.user.generateHash(req.body.newPass);
