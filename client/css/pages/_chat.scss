@@ -1,0 +1,25 @@
+.chat_block {
+   display: flex;
+   width: 100%;
+}
+.chat_block-topbar {
+   display: flex;
+   background-color: #C4C4C4;
+   height: 50px;
+   width: 100%;
+   justify-content: space-between;
+   align-items: center;
+   padding: 30px 35px;
+   button {
+      background-color: $darkblue;
+      border: none;
+      padding: 10px;
+      color: $white;
+      border-radius: 5px   ;
+      -webkit-border-radius: 5px   ;
+      -moz-border-radius: 5px   ;
+      -ms-border-radius: 5px   ;
+      -o-border-radius: 5px   ;
+      cursor: pointer;
+}
+}

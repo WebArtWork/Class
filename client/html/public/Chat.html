@@ -20,22 +20,53 @@
 	</script>
  </head>
 <body>
-	 <div class="topnav">
-      <div class="topnav_menu">
-        <a href="/">Home</a>
-        <a href="#About">About</a>
-        <div>
-          <a href="/html/public/Categories.html">Categories</a>
-          <a href="/html/public/Rooms.html">Rooms</a>
-         
-        </div>
-      </div>
-      <div class="top_nav-login">
-        <div><a href="/api/user/logout">Logout</a></div>
-        <img ng-click="u.Settings()" ng-src="{{u.avatarUrl}}">
-        
-      </div>
-  		</div>
+	<div class="topnav">
+	<div class="topnav_menu">
+		<a href="/">Home</a>
+		<a href="#About">About</a>
+		<div>
+			<a href="/html/public/Categories.html">Categories</a>
+			<a href="/html/public/Rooms.html">Rooms</a>
+			
+		</div>
+	</div>
+	<div class="top_nav-login">
+		<div><a href="/api/user/logout">Logout</a></div>
+		<img ng-click="u.Settings()" ng-src="{{u.avatarUrl}}">
+		
+	</div>
+	</div>
+	<section>
+		<div class="wrapper_chats">
+			<div class="chats_bar">
+				<img class="" src="/img/category_education.jpg">
+				<h3>Chat name</h3>
+				<div class="chat_bar_content">
+					<div class="chats_bar-admin">
+						Admin: <span> Name</span>
+					</div>
+					<div class="chats_bar-members">
+						Mebmers <span>38</span>
+					</div>
+					<!-- <div class="chats_bar-add">
+						Albom
+						<button><i class="fas fa-plus-circle"></i></button>
+					</div> -->
+					<div class="chats_bar-desc">
+						<h3>Description:</h3>
+						<textarea name="" id="" cols="30" rows="10" readonly></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="chat_block">
+				<div class="chat_block-topbar">
+					<div><button>Albom <i class="fas fa-camera"></i></button></div>
+					<div><button>Setings  <i class="fas fa-cog"></i></button></div>
+				</div>
+			</div>
+
+	</section>
+
 	<script src="/gen/public-min.js"></script>
 	<script>
 		var app = angular.module('ngapp',['wcom']);
