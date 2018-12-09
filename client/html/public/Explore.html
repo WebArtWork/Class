@@ -13,8 +13,8 @@
         </div>
       </div>
       <div class="top_nav-login" ng-if="!u._id">
-        <a ng-click="u.Login()">Login/Register</a>
-        <a href="/api/user/logout">Logout</a>
+        <div><a ng-click="u.Login()">Login/Register</a></div>
+        </div><a href="/api/user/logout">Logout</a></div>
         <img ng-click="u.Settings()" ng-src="{{u.avatarUrl}}" width="50px" height="50px">
         
       </div>
