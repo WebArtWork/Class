@@ -140,12 +140,13 @@ services.User = function($http, $timeout, mongo, file, modal){
     }
 	// End of service
 } 
-services.room = function(mongo, $http, item, file, user) {
+services.Room = function(mongo, $http, item, file, user) {
 	var self = this;
 	this.rooms = mongo.get('room', function(arr, obj) {
 		self.room = arr;
-		self._room = obj;
+		self._rom = obj;
 	});
+	console.log('something');
 	file.add({
 		id: 'roomAvatarUrlId',
 		width: 500,
@@ -207,10 +208,10 @@ services.room = function(mongo, $http, item, file, user) {
 			});
 		}
 	}
-	this.Register = function() {
+	this.NewRoom = function() {
     	modal.open({
-            templateUrl: '/html/modals/Register.html',
-            u: self
+            templateUrl: '/html/modals/NewRoom.html',
+            r: self
         });
     }
 }

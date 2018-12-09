@@ -19,4 +19,12 @@ module.exports = function(app, sd) {
 			});
 		}		
 		app.get('/Categories', Categories);
+		var CategoryRooms = function(req, res){
+			sd.User.find({}).limit(10).exec(function(err, users){
+				res.render('public/CategoryRooms', sd._ro(req, res, {
+					users: users
+				}));
+			});
+		}		
+		app.get('/CategoryRooms', CategoryRooms);
 }; 
