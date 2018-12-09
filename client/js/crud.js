@@ -14,9 +14,10 @@ services.User = function($http, $timeout, mongo, file, modal){
 				age: self.age,
 				name: self.name,
 				_id: self._id,
-				is: self.is
+				is: self.is,
+				avatarUrl: self.avatarUrl
 			};
-			console.log('something');
+			
         }
 		$http.get('/api/user/me').then(function(resp){
 			for(var key in resp.data){
@@ -134,6 +135,7 @@ services.User = function($http, $timeout, mongo, file, modal){
             templateUrl: '/html/modals/Settings.html',
             u: self
         });
+
 
     }
 	// End of service
