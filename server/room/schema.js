@@ -5,7 +5,11 @@ var Schema = mongoose.Schema({
 	members: [{type: mongoose.Schema.Types.ObjectId, ref: 'User'}],
 	url: {type: String, unique: true, sparse: true, trim: true},
 	avatarUrl: {type: String, default: '/api/group/default.png'},
-	description: String
+	description: String,
+	type: {
+		type: String,
+		enum: ['Education', 'Sport and fitness', 'Dance','Languages', 'Music', 'Trainings', 'Art', 'Games', 'Health and beauty', 'Cooking']
+	}
 });
 
 Schema.methods.create = function(obj, user, sd) {

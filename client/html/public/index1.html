@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app="ngapp">
+<head>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78236546-12"></script>
+	<script>
+ 	window.dataLayer = window.dataLayer || [];
+  	function gtag(){dataLayer.push(arguments);}
+  	gtag('js', new Date());
+  	gtag('config', 'UA-78236546-12');
+</script>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CLASS COMMUNITY is a social network for communication in groups</title>
+	<meta name="description" content="CLASS COMMUNITY is a social network for communication in groups. With it, you can create or join already existing discussions, which for your convenience are divided into categories.">
+	<meta name="keywords" content="WELCOME, CLASS COMMUNITY, social network, communication, groups, create, join, discussions, convenience, categories, chat rooms, teacher, class, homework, assignments, schedule, publish school news, announcements, class, discussion, feedback, student, add photos, links, books, useful materials, tests, questionnaires children, read, virtual space, sense, team cohesion, friendly relations, chat, parents, communicate, search, partners, trainers, sport, publish notes, workouts, friend, fitness, talk, successes, photo journal,Login, Register">
+	<base href="/">
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+	<link rel="stylesheet" type="text/css" href="/gen/public.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,500,600,700&amp;subset=cyrillic" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+</head>
+<body>
+	<row class="row">
+		{% block body %}{% endblock %}
+	</row>
+	
+	{% block script %}	
+	<script src="/gen/public-min.js"></script>
+	<script>
+		var app = angular.module('ngapp',['wcom']);
+	</script>
+	<script src="/js/wcom/wcom.js"></script>
+	<script src="/js/crud.js"></script>
+	<script src="/js/public.js"></script>
+	</script>
+	{% endblock %}
+</body>
+</html>
