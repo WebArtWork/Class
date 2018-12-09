@@ -1,4 +1,4 @@
-services.Room = function(mongo, $http, file) {
+services.room = function(mongo, $http, file) {
 	var self = this;
 	this.rooms = mongo.get('room', function(arr, obj) {
 		self.room = arr;
