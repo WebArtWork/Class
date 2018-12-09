@@ -83,3 +83,17 @@
    bottom: 71px;
    font-size: 30px;
 }
+
+.chats_bar-add {
+   display: flex;
+   button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      
+   }
+   i {
+      font-size: 25px;
+      vertical-align: middle;
+   }
+}
