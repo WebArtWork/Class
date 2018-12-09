@@ -23,6 +23,18 @@ services.User = function($http, $timeout, mongo, file, modal){
 				self[key] = resp.data[key];
 			}
 		});
+		file.add({
+		id: 'userAvatarUrlId',
+		width: 500,
+		height: 500
+	}, function(dataUrl) {
+		self.avatarUrl = dataUrl;
+		$http.post('/api/user/file', {
+			dataUrl: dataUrl
+		}).then(function(resp) {
+			self.avatarUrl = resp.data;
+		});
+	});
 	// Search
 		this.sMale = this.sFemale = true;
 		this.search = function(){
@@ -122,6 +134,7 @@ services.User = function($http, $timeout, mongo, file, modal){
             templateUrl: '/html/modals/Settings.html',
             u: self
         });
+
     }
 	// End of service
 } 
