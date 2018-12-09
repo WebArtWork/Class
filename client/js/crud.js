@@ -150,6 +150,7 @@ services.User = function($http, $timeout, mongo, file, modal){
 
 
     }
+    //chat
         this.SettingsChat = function() {
         modal.open({
             templateUrl: '/html/modals/SettingsChat.html',
@@ -166,11 +167,11 @@ services.User = function($http, $timeout, mongo, file, modal){
     }
 	// End of service
 } 
-services.Room = function(mongo, $http, item, file, user) {
+services.Room = function(mongo, $http, file, user) {
 	var self = this;
 	this.rooms = mongo.get('room', function(arr, obj) {
 		self.room = arr;
-		self._rom = obj;
+		self._room = obj;
 	});
 	file.add({
 		id: 'roomAvatarUrlId',
@@ -209,7 +210,7 @@ services.Room = function(mongo, $http, item, file, user) {
 			});
 		}
 	}
-	this.update = function(group, message) {
+	this.update = function(room, message) {
 		mongo.updateAll('room', {
 			name: room.name,
 			members: room.moderators,

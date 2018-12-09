@@ -1,4 +1,4 @@
-services.room = function(mongo, $http, item, file) {
+services.Room = function(mongo, $http, file) {
 	var self = this;
 	this.rooms = mongo.get('room', function(arr, obj) {
 		self.room = arr;
@@ -41,7 +41,7 @@ services.room = function(mongo, $http, item, file) {
 			});
 		}
 	}
-	this.update = function(group, message) {
+	this.update = function(room, message) {
 		mongo.updateAll('room', {
 			name: room.name,
 			members: room.moderators,

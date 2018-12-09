@@ -22,15 +22,15 @@ module.exports = function(app, sd) {
 		app.get('/Categories', Categories);
 
 		var CategoryRooms = function(req, res){
-			sd.User.find({}).limit(10).exec(function(err, rooms){
+			sd.Room.find({}).limit(10).exec(function(err, rooms){
 				res.render('public/CategoryRooms', sd._ro(req, res, {
 					rooms: rooms
 				}));
 			});
-		}		
+		}
 		app.get('/CategoryRooms', CategoryRooms);
 
-			var Rooms = function(req, res){
+		var Rooms = function(req, res){
 			sd.User.find({}).limit(10).exec(function(err, rooms){
 				res.render('public/Rooms', sd._ro(req, res, {
 					rooms: rooms
