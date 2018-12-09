@@ -13,6 +13,19 @@
       display: block;
       margin-bottom: 15px;
       cursor: pointer;
+      img {
+         max-width: 50px;
+         max-height: 50px;
+         min-width: 50px;
+         min-height: 50px;
+         border-radius: 50%;
+         border: 2px solid white;
+         -webkit-border-radius: 50%;
+         -moz-border-radius: 50%;
+         -ms-border-radius: 50%;
+         -o-border-radius: 50%;
+         
+      }
    }
 }
 
