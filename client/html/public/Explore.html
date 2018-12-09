@@ -12,10 +12,10 @@
          
         </div>
       </div>
-      <div class="top_nav-login" ng-if="!u._id">
-        <div><a ng-click="u.Login()">Login/Register</a></div>
-        </div><a href="/api/user/logout">Logout</a></div>
-        <img ng-click="u.Settings()" ng-src="{{u.avatarUrl}}" width="50px" height="50px">
+      <div class="top_nav-login">
+        <div  ng-if="!u._id"><a ng-click="u.Login()">Login/Register</a></div>
+        <div  ng-if="u._id"><a href="/api/user/logout">Logout</a></div>
+        <img  ng-if="u._id" ng-click="u.Settings()" ng-src="{{u.avatarUrl}}">
         
       </div>
       
