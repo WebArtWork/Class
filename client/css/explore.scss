@@ -97,3 +97,105 @@
    background-color: $darkblue;
 
 }
+
+// MEDIA QUERIES 
+
+//                          RESOLUTION MAIN BREAKPOINTS              ************
+/* Extra Small Devices, Phones 480px */
+/* Small Devices, Tablets 768px */
+/* Medium Devices, Desktops 992px */
+/* Large Devices, Wide Screens 1200px */
+// 1200 800 700 480 390 USED 
+
+// @media only screen and (max-width: 1024px)
+
+@media only screen and (max-width: 1524px) {
+   .about_card_img {
+      img {
+         max-width: 500px;
+         width: 100%;
+
+      }
+   }
+
+   .about_card_text {
+      max-width: 500px;
+      width: 100%;
+   }
+}
+
+@media only screen and (max-width: 1268px) {
+   .container_header {
+      background-size: contain;
+      background-repeat: no-repeat;
+   }
+
+   .about_card {
+      flex-direction: column;
+      margin-bottom: 20px;
+   }
+
+   .about_2 {
+      order: 2;
+   }
+
+   .container_about {
+      padding: 0px 50px;
+   }
+}
+
+
+@media only screen and (max-width: 900px) {
+   .container_header {
+      height: 70vh;
+   }
+}
+
+
+@media only screen and (max-width: 600px) {
+   .header_title {
+      margin-top: 0;
+      width: 70%;
+
+      h1 {
+         font-size: 25px;
+      }
+   }
+
+   .container_about-link {
+      font-size: 20px;
+   }
+
+   .about_card_text {
+      h2 {
+         font-size: 18px;
+      }
+   }
+
+   .container_header {
+      height: 50vh;
+   }
+}
+
+@media only screen and (max-width: 500px) {
+   .container_header {
+      height: 40vh;
+   }
+}
+
+@media only screen and (max-width: 390px) {
+   .header_title {
+      width: 100%;
+      margin-top: 143px;
+   }
+
+   .container_header {
+      height: 33vh;
+   }
+
+   .about_card_text {
+      h2 {
+         font-size: 15px;
+      }
+   }
+}
