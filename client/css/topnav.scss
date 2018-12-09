@@ -15,7 +15,13 @@ $lightblack: #464444;
       max-height: 50px;
       min-width: 50px;
       min-height: 50px;
-   }
+      border-radius: 50%   ;
+      border: 1px solid white;
+      -webkit-border-radius: 50%   ;
+      -moz-border-radius: 50%   ;
+      -ms-border-radius: 50%   ;
+      -o-border-radius: 50%   ;
+   }  
 }
 .topnav {
    background-color: $darkblue;
