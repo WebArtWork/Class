@@ -1,0 +1,41 @@
+.chat_albom {
+   padding: 30px;
+   background-color: #f9f9f9;
+}
+.chat_albom-block {
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.chat_albom-btn {
+   margin-bottom: 20px;
+   button {
+      display: block;
+      background-color: $darkblue;
+      border: none;
+      margin: 0 auto;
+      width: 175px;
+      height: 50px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      font-size: 20px;
+      color: $white;
+      cursor: pointer;
+   }
+}
+
+
+
+.chat_albom__img {
+   margin-right: 10px;
+   margin-bottom: 10px;
+   img {
+      max-width: 130px;
+      max-height: 130px;
+      min-width: 130px;
+      max-height: 130px;
+   }
+}
