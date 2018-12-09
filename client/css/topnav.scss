@@ -2,13 +2,20 @@ $darkblue: #162B43;
 $lightblue: #65DAFF;
 $lightblack: #464444;
 
-
+.topnav_menu {
+   display: flex;
+   align-items: center;
+}
+.top_nav-login {
+   display: flex;
+}
 .topnav {
    background-color: $darkblue;
    overflow: hidden;
    display: flex;
    align-items: center;
-   padding: 5px 50px;   
+   padding: 5px 50px;
+   justify-content: space-between;
 }
 
 .topnav a {

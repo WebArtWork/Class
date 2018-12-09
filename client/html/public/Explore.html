@@ -3,18 +3,20 @@
 <div class="container" ng-controller="Users">
   <section class="container_header" >
     <div class="topnav">
-      <div class="topnav_ menu">
+      <div class="topnav_menu">
         <a href="/">Home</a>
         <a href="#About">About</a>
         <div ng-if="u._id">
           <a href="/html/public/Categories.html">Categories</a>
           <a href="/html/public/Rooms.html">Rooms</a>
-          <a href="/api/user/logout">Logout</a> 
-           <img ng-click="u.Settings()" ng-src="{{u.avatarUrl}}" width="50px" height="50px">
+         
         </div>
       </div>
-      <div ng-if="!u._id">
+      <div class="top_nav-login" ng-if="!u._id">
         <a ng-click="u.Login()">Login/Register</a>
+        <a href="/api/user/logout">Logout</a>
+        <img ng-click="u.Settings()" ng-src="{{u.avatarUrl}}" width="50px" height="50px">
+        
       </div>
       
     </div>
