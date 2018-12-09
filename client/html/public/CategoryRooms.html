@@ -44,10 +44,10 @@
 		</div>
 		<div ng-repeat="room in rooms" class="rooms-block">
 			<a href="/html/public/Room.html">
-			<img src="/img/category_education.jpg">
-		</a>
+			<img ng-src="{{room.avatarUrl}}">
+			</a>
 			<div class="rooms_title">{{room.name}}</div>
-			<div class="rooms_number"><span>{{room.chat.length}}</span>chat's</div>
+			<div class="rooms_number"><span></span>chat's</div>
 
 		</div>
 		<!-- <div class="category-sport"></div>

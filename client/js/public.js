@@ -61,7 +61,6 @@ controllers.Users = function($scope, User){
 controllers.Rooms = function($scope, Room){
 	"ngInject";
 	$scope.r = Room;
-	console.log(Room);
 };
 directives.lusers = function(){
 	return {

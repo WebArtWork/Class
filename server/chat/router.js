@@ -13,6 +13,15 @@ module.exports = function(sd) {
 			author: req.user._id
 		};
 	};
+	router.post("/messages", function(req, res) {
+		return {
+			messages: [{
+				nick: req.body._id,
+				text: 
+			}]
+		}
+
+	});
 	router.post("/file", function(req, res) {
 		chat.findOne({
 			_id: req.body._id,

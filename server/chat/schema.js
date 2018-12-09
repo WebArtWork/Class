@@ -5,7 +5,12 @@ var Schema = mongoose.Schema({
 	members: [{type: mongoose.Schema.Types.ObjectId, ref: 'User'}],
 	url: {type: String, unique: true, sparse: true, trim: true},
 	avatarUrl: {type: String, default: '/api/chat/default.png'},
-	description: String
+	description: String,
+	messages: [{
+		nick: {type: mongoose.Schema.Types.ObjectId, ref: 'User'},
+		text: String,
+		date: Date
+	}]
 });
 
 Schema.methods.create = function(obj, user, sd) {

@@ -31,7 +31,7 @@ module.exports = function(app, sd) {
 		app.get('/CategoryRooms', CategoryRooms);
 
 		var Rooms = function(req, res){
-			sd.User.find({}).limit(10).exec(function(err, rooms){
+			sd.Room.find({}).limit(10).exec(function(err, rooms){
 				res.render('public/Rooms', sd._ro(req, res, {
 					rooms: rooms
 				}));
