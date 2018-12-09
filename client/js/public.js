@@ -1,7 +1,6 @@
 controllers.Auth = function($scope){
 	"ngInject";
 	var user = $scope.user = {};
-	console.log("ggg");
 	/*
 	*	ReCaptcha
 	*/

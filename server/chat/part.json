@@ -1,0 +1,19 @@
+{
+	"name": "Room",
+	"router": [{
+		"name": "Basic",
+		"src": "router.js"
+	}],
+	"dependencies": {
+	},
+	"crud": {
+		"updatesAll": [{
+			"keys": ["name", "members", "avatarUrl", "description"],
+			"name": ""
+		}],
+		"unique_field": [{
+			"key": "url",
+			"name": "url"
+		}]
+	}
+}
