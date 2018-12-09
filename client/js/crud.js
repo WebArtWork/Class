@@ -208,10 +208,10 @@ services.Room = function(mongo, $http, item, file, user) {
 			});
 		}
 	}
-	this.Register = function() {
+	this.NewRoom = function() {
     	modal.open({
-            templateUrl: '/html/modals/Register.html',
-            u: self
+            templateUrl: '/html/modals/NewRoom.html',
+            r: self
         });
     }
 }
