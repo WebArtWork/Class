@@ -21,7 +21,7 @@ services.room = function(mongo, $http, item, file) {
 			name: room.name,
 			description: room.description,
 			author: room.author,
-			members: room.members
+			members: room.members,
 			url: room.url
 		}, function(created) {
 			if (room.avatarUrl && room.avatarUrl.length > 100) {

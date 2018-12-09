@@ -16,7 +16,8 @@ services.User = function($http, $timeout, mongo, file, modal){
 				_id: self._id,
 				is: self.is
 			};
-		}
+			console.log('something');
+        }
 		$http.get('/api/user/me').then(function(resp){
 			for(var key in resp.data){
 				self[key] = resp.data[key];
@@ -113,6 +114,12 @@ services.User = function($http, $timeout, mongo, file, modal){
         this.Login = function() {
         modal.open({
             templateUrl: '/html/modals/Login.html',
+            u: self
+        });
+    }
+        this.Settings = function() {
+        modal.open({
+            templateUrl: '/html/modals/Settings.html',
             u: self
         });
     }
