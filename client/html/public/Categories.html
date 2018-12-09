@@ -1,12 +1,31 @@
-{% extends 'index1.html' %}
-{% block body %}
-	<div class="category" ng-controller="Rooms">
+<!DOCTYPE html>
+<html ng-app="ngapp">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Categories</title>
+	<meta name="description" content="After registration, the user goes into the Categories, where the list of sections with different topics. This may be a section of training, sports and fitness, training and more.">
+	<meta name="keywords" content="CLASS COMMUNITY, registration,user, Categories, list of sections, topics, training, sports, fitness, training, Education, Sport and fitness, Dance, Languages, Music, Trainings, Art, Games, Health and beauty, Cooking, rooms, home, exit">
+	<meta name="author" content="Honchar Denys">
+	<base href="/">
+	<link rel="stylesheet" type="text/css" href="/css/index.css">
+ 	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-78236546-11"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+ 	function gtag() { dataLayer.push(arguments); }
+	gtag('js', new Date());
+ 	gtag('config', 'UA-78236546-11');
+	</script>
+ </head>
+<body>
+	<div class="category">
 		<div class="category-education">
 			<img  src="/img/category_education.jpg">
 			<div class="category_title">Education</div>
 			<div class="category_number"><span>123</span> Rooms</div> 
 		</div>
-		<button ng-click="r.NewRoom();"></button>
+		<button ng-click="u.NewRoom()"></button>
 		<!-- <div class="category-sport"></div>
 		<div class="category-dance"></div>
 		<div class="category-languages"></div>
@@ -17,4 +36,14 @@
 		<div class="category-health"></div>
 		<div class="category-cooking"></div> -->
 	</div>
-{% endblock %}
+	<script src="/gen/public-min.js"></script>
+	<script>
+		var app = angular.module('ngapp',['ui.router', 'wcom']);
+	</script>
+	<script src="/js/wcom/wcom.js"></script>
+	<script src="/js/crud.js"></script>
+	<script src="/js/user.js"></script>
+	<script src="/js/room.js"></script>
+	<script src="/js/public.js"></script>
+</body>
+</html> 
