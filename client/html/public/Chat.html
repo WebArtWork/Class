@@ -19,7 +19,9 @@
  	gtag('config', 'UA-78236546-11');
 	</script>
  </head>
-<body>
+<body> 
+	<div  ng-controller="Users">
+
 	<div class="topnav">
 	<div class="topnav_menu">
 		<a href="/">Home</a>
@@ -61,7 +63,7 @@
 			<div class="chat_block">
 				<div class="chat_block-topbar">
 					<div><button>Albom <i class="fas fa-camera"></i></button></div>
-					<div><button>Setings  <i class="fas fa-cog"></i></button></div>
+					<div><button ng-click="u.SettingsChat()">Setings  <i class="fas fa-cog"></i></button></div>
 				</div>
 				<div class="chat_block-viewer">
 					<div>
@@ -75,7 +77,7 @@
 
 			</div>
 	</section>
-
+</div>
 	<script src="/gen/public-min.js"></script>
 	<script>
 		var app = angular.module('ngapp',['wcom']);
@@ -83,5 +85,7 @@
 	<script src="/js/wcom/wcom.js"></script>
 	<script src="/js/crud.js"></script>
 	<script src="/js/user.js"></script>
+	<script src="/js/public.js"></script>
+	<script src="/js/room.js"></script>
 </body>
 </html> 

@@ -38,4 +38,13 @@ module.exports = function(app, sd) {
 			});
 		}		
 		app.get('/Rooms', Rooms);
+
+		var Chat = function(req, res){
+			sd.User.find({}).limit(10).exec(function(err, users){
+				res.render('public/Chat', sd._ro(req, res, {
+					users: users
+				}));
+			});
+		}		
+		app.get('/Chat', Chat);
 }; 

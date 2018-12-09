@@ -150,6 +150,14 @@ services.User = function($http, $timeout, mongo, file, modal){
 
 
     }
+        this.SettingsChat = function() {
+        modal.open({
+            templateUrl: '/html/modals/SettingsChat.html',
+            u: self
+        });
+
+
+    }
 	// End of service
 } 
 services.Room = function(mongo, $http, item, file, user) {
