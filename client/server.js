@@ -11,11 +11,4 @@ module.exports = function(app, sd) {
 			});
 		}		
 		app.get('/', Explore);
-		var Room = function(req, res){
-				res.render('public/Categories', sd._ro(req, res, {
-					users: users
-				}));
-			
-		}
-		app.get('/Categories', Categories);
 }; 
